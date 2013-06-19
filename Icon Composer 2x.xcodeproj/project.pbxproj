@@ -24,6 +24,8 @@
 		E7555E1D1771C7B7008CBD2F /* Disk Image */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "Disk Image"; sourceTree = "<group>"; };
 		E7555E1F1771C7B7008CBD2F /* Preview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Preview.jpg; sourceTree = "<group>"; };
 		E7555E201771C7B7008CBD2F /* DmgBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DmgBackground.png; sourceTree = SOURCE_ROOT; };
+		E7D763561771D0E7009A6625 /* License */ = {isa = PBXFileReference; lastKnownFileType = text; path = License; sourceTree = SOURCE_ROOT; };
+		E7D763571771D0FA009A6625 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 		E7F5706E17719A4800209A8A /* Icon Composer 2x.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Icon Composer 2x.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F5707117719A4800209A8A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E7F5707417719A4800209A8A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -141,7 +143,9 @@
 				E7F5707A17719A4800209A8A /* InfoPlist.strings */,
 				E7F5707D17719A4800209A8A /* main.m */,
 				E7F5707F17719A4800209A8A /* Icon Composer 2x-Prefix.pch */,
+				E7D763571771D0FA009A6625 /* README.md */,
 				E7F5708017719A4800209A8A /* Credits.rtf */,
+				E7D763561771D0E7009A6625 /* License */,
 				E7555E1B1771C7B7008CBD2F /* DmgCanvasTemplate.dmgCanvas */,
 				E7555E201771C7B7008CBD2F /* DmgBackground.png */,
 			);
