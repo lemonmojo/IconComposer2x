@@ -4,6 +4,7 @@ Summary
 -------
 
 Icon Composer 2x is a Retina Icons supporting replacement for Apple's Icon Composer.
+A pre-compiled binary can be [downloaded here](http://www.lemonmojo.com/dl/IconComposer2x.dmg).
 
 License
 -------
