@@ -155,7 +155,7 @@ imageView1024;
     [self saveImage:image32 toPath:[NSString stringWithFormat:@"%@/icon_32x32.png", tempPath]];
     [self saveImage:image32 toPath:[NSString stringWithFormat:@"%@/icon_16x16@2x.png", tempPath]];
     
-    [self saveImage:image32 toPath:[NSString stringWithFormat:@"%@/icon_16x16.png", tempPath]];
+    [self saveImage:image16 toPath:[NSString stringWithFormat:@"%@/icon_16x16.png", tempPath]];
     
     NSTask* task = [[NSTask alloc] init];
     
