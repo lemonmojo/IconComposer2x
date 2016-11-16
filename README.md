@@ -6,7 +6,7 @@ Summary
 Icon Composer 2x is a replacement for Apple's Icon Composer that supports Retina Resolution Icons.<br />
 Prebuilt binaries are available [here](http://www.lemonmojo.com/work).
 
-Requires Xcode to be installed or more specifically, iconutil to be stored or linked in /usr/bin/iconuti.
+Requires Xcode to be installed or more specifically, iconutil to be stored or linked in /usr/bin/iconutil.
 
 License
 -------
