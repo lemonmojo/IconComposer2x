@@ -140,22 +140,43 @@ imageView1024;
     
     [fileManager createDirectoryAtPath:tempPath withIntermediateDirectories:YES attributes:nil error:nil];
     
-    [self saveImage:image1024 toPath:[NSString stringWithFormat:@"%@/icon_512x512@2x.png", tempPath]];
+    if (image1024 &&
+        image1024.isValid) {
+        [self saveImage:image1024 toPath:[NSString stringWithFormat:@"%@/icon_512x512@2x.png", tempPath]];
+    }
     
-    [self saveImage:image512 toPath:[NSString stringWithFormat:@"%@/icon_512x512.png", tempPath]];
-    [self saveImage:image512 toPath:[NSString stringWithFormat:@"%@/icon_256x256@2x.png", tempPath]];
+    if (image512 &&
+        image512.isValid) {
+        [self saveImage:image512 toPath:[NSString stringWithFormat:@"%@/icon_512x512.png", tempPath]];
+        [self saveImage:image512 toPath:[NSString stringWithFormat:@"%@/icon_256x256@2x.png", tempPath]];
+    }
     
-    [self saveImage:image256 toPath:[NSString stringWithFormat:@"%@/icon_256x256.png", tempPath]];
-    [self saveImage:image256 toPath:[NSString stringWithFormat:@"%@/icon_128x128@2x.png", tempPath]];
+    if (image256 &&
+        image256.isValid) {
+        [self saveImage:image256 toPath:[NSString stringWithFormat:@"%@/icon_256x256.png", tempPath]];
+        [self saveImage:image256 toPath:[NSString stringWithFormat:@"%@/icon_128x128@2x.png", tempPath]];
+    }
     
-    [self saveImage:image128 toPath:[NSString stringWithFormat:@"%@/icon_128x128.png", tempPath]];
+    if (image128 &&
+        image128.isValid) {
+        [self saveImage:image128 toPath:[NSString stringWithFormat:@"%@/icon_128x128.png", tempPath]];
+    }
     
-    [self saveImage:image64 toPath:[NSString stringWithFormat:@"%@/icon_32x32@2x.png", tempPath]];
+    if (image64 &&
+        image64.isValid) {
+        [self saveImage:image64 toPath:[NSString stringWithFormat:@"%@/icon_32x32@2x.png", tempPath]];
+    }
     
-    [self saveImage:image32 toPath:[NSString stringWithFormat:@"%@/icon_32x32.png", tempPath]];
-    [self saveImage:image32 toPath:[NSString stringWithFormat:@"%@/icon_16x16@2x.png", tempPath]];
+    if (image32 &&
+        image32.isValid) {
+        [self saveImage:image32 toPath:[NSString stringWithFormat:@"%@/icon_32x32.png", tempPath]];
+        [self saveImage:image32 toPath:[NSString stringWithFormat:@"%@/icon_16x16@2x.png", tempPath]];
+    }
     
-    [self saveImage:image16 toPath:[NSString stringWithFormat:@"%@/icon_16x16.png", tempPath]];
+    if (image16 &&
+        image16.isValid) {
+        [self saveImage:image16 toPath:[NSString stringWithFormat:@"%@/icon_16x16.png", tempPath]];
+    }
     
     NSTask* task = [[NSTask alloc] init];
     
@@ -170,9 +191,13 @@ imageView1024;
 }
 
 - (void)saveImage:(NSImage*)image toPath:(NSString*)filePath {
-    NSBitmapImageRep *imgRep = [[image representations] objectAtIndex:0];
-    NSData *data = [imgRep representationUsingType: NSPNGFileType properties:nil];
-    [data writeToFile:filePath atomically:NO];
+    NSImageRep *imgRep = [[image representations] objectAtIndex:0];
+    
+    if ([imgRep isKindOfClass:[NSBitmapImageRep class]]) {
+        NSBitmapImageRep *bmpRep = (NSBitmapImageRep*)imgRep;
+        NSData *data = [bmpRep representationUsingType:NSPNGFileType properties:[NSDictionary dictionary]];
+        [data writeToFile:filePath atomically:NO];
+    }
 }
 
 - (NSString*)pathForTemporaryFileWithPostfix:(NSString*)postfix {
