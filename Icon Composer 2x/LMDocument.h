@@ -31,7 +31,7 @@
 - (BOOL)loadWithData:(NSData*)data;
 - (NSImage*)imageWithSize:(NSSize)size fromImage:(NSImage*)image;
 - (NSImageRep*)imageRepWithSize:(NSSize)size fromImage:(NSImage*)image;
-- (void)saveToPath:(NSString*)filePath image16:(NSImage*)image16 image32:(NSImage*)image32 image64:(NSImage*)image64 image128:(NSImage*)image128 image256:(NSImage*)image256 image512:(NSImage*)image512 image1024:(NSImage*)image1024;
+- (BOOL)saveToPath:(NSString*)filePath image16:(NSImage*)image16 image32:(NSImage*)image32 image64:(NSImage*)image64 image128:(NSImage*)image128 image256:(NSImage*)image256 image512:(NSImage*)image512 image1024:(NSImage*)image1024 error:(NSError **)outError;
 - (void)saveImage:(NSImage*)image toPath:(NSString*)filePath;
 - (NSString*)pathForTemporaryFileWithPostfix:(NSString*)postfix;
 
