@@ -9,15 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "LMImageView.h"
 
-@interface LMDocument : NSDocument {
-    NSImage *imageLoad16;
-    NSImage *imageLoad32;
-    NSImage *imageLoad64;
-    NSImage *imageLoad128;
-    NSImage *imageLoad256;
-    NSImage *imageLoad512;
-    NSImage *imageLoad1024;
-}
+@interface LMDocument : NSDocument
 
 @property (assign) IBOutlet NSView *contentView;
 @property (assign) IBOutlet LMImageView *imageView1024;
@@ -27,6 +19,14 @@
 @property (assign) IBOutlet LMImageView *imageView64;
 @property (assign) IBOutlet LMImageView *imageView32;
 @property (assign) IBOutlet LMImageView *imageView16;
+
+@property (retain) NSImage *imageLoad16;
+@property (retain) NSImage *imageLoad32;
+@property (retain) NSImage *imageLoad64;
+@property (retain) NSImage *imageLoad128;
+@property (retain) NSImage *imageLoad256;
+@property (retain) NSImage *imageLoad512;
+@property (retain) NSImage *imageLoad1024;
 
 - (BOOL)loadWithData:(NSData*)data;
 - (NSImage*)imageWithSize:(NSSize)size fromImage:(NSImage*)image;

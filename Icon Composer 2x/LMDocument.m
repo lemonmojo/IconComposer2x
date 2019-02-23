@@ -20,7 +20,15 @@ imageView64,
 imageView128,
 imageView256,
 imageView512,
-imageView1024;
+imageView1024,
+imageLoad16,
+imageLoad32,
+imageLoad64,
+imageLoad128,
+imageLoad256,
+imageLoad512,
+imageLoad1024
+;
 
 - (id)init {
     self = [super init];
@@ -61,13 +69,13 @@ imageView1024;
     
     [self.contentView addSubview:scrollView];
     
-    imageView16.image = imageLoad16;
-    imageView32.image = imageLoad32;
-    imageView64.image = imageLoad64;
-    imageView128.image = imageLoad128;
-    imageView256.image = imageLoad256;
-    imageView512.image = imageLoad512;
-    imageView1024.image = imageLoad1024;
+    imageView16.image = self.imageLoad16;
+    imageView32.image = self.imageLoad32;
+    imageView64.image = self.imageLoad64;
+    imageView128.image = self.imageLoad128;
+    imageView256.image = self.imageLoad256;
+    imageView512.image = self.imageLoad512;
+    imageView1024.image = self.imageLoad1024;
     
     imageView16.undoManager = self.undoManager;
     imageView32.undoManager = self.undoManager;
@@ -108,13 +116,13 @@ imageView1024;
     if (!img)
         return NO;
     
-    imageLoad16 = [self imageWithSize:NSMakeSize(16, 16) fromImage:img];
-    imageLoad32 = [self imageWithSize:NSMakeSize(32, 32) fromImage:img];
-    imageLoad64 = [self imageWithSize:NSMakeSize(64, 64) fromImage:img];
-    imageLoad128 = [self imageWithSize:NSMakeSize(128, 128) fromImage:img];
-    imageLoad256 = [self imageWithSize:NSMakeSize(256, 256) fromImage:img];
-    imageLoad512 = [self imageWithSize:NSMakeSize(512, 512) fromImage:img];
-    imageLoad1024 = [self imageWithSize:NSMakeSize(1024, 1024) fromImage:img];
+    self.imageLoad16 = [self imageWithSize:NSMakeSize(16, 16) fromImage:img];
+    self.imageLoad32 = [self imageWithSize:NSMakeSize(32, 32) fromImage:img];
+    self.imageLoad64 = [self imageWithSize:NSMakeSize(64, 64) fromImage:img];
+    self.imageLoad128 = [self imageWithSize:NSMakeSize(128, 128) fromImage:img];
+    self.imageLoad256 = [self imageWithSize:NSMakeSize(256, 256) fromImage:img];
+    self.imageLoad512 = [self imageWithSize:NSMakeSize(512, 512) fromImage:img];
+    self.imageLoad1024 = [self imageWithSize:NSMakeSize(1024, 1024) fromImage:img];
     
     return YES;
 }
