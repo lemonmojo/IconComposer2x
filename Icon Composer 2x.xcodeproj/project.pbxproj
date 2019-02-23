@@ -227,7 +227,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/dmgcanvas \"$SRCROOT/DmgCanvasTemplate.dmgCanvas\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.dmg\"";
+			shellScript = "/usr/local/bin/dmgcanvas \"$SRCROOT/DmgCanvasTemplate.dmgCanvas\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.dmg\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
